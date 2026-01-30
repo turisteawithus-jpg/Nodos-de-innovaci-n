@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Estratégica | Turistea With Us & CORUNIVERSITEC</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deep: '#0f172a',
+                            electric: '#2563eb',
+                            cyan: '#22d3ee',
+                            slate: '#1e293b',
+                            whatsapp: '#25d366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.1), transparent),
+                        #0f172a;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            border-color: #22d3ee;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 10px; }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.2 !important; }
+        }
+    </style>
+</head>
+<body class="bg-brand-deep text-slate-200 font-sans selection:bg-brand-cyan selection:text-brand-deep overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 sm:h-20 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-brand-electric rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-graduation-cap text-white text-lg sm:text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold text-sm sm:text-lg block leading-none tracking-tight uppercase">Turistea With Us</span>
+                        <span class="text-brand-cyan text-[10px] sm:text-xs font-medium uppercase tracking-widest">Alianza CORUNIVERSITEC</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4 items-center">
+                    <a href="tel:+573208734659" class="hidden sm:flex items-center gap-2 text-brand-cyan text-sm font-bold mr-4">
+                        <i class="fa-solid fa-phone"></i> 320 873 4659
+                    </a>
+                    <a href="https://wa.me/573208734659?text=Señor%20Rector,%20deseo%20agendar%20una%20reunión%20para%20revisar%20la%20Alianza%20Estratégica" target="_blank" class="bg-brand-electric hover:bg-blue-700 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-lg shadow-blue-500/20">
+                        Agendar Reunión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center pt-16 overflow-hidden hero-gradient">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-brand-electric rounded-full blur-[80px] sm:blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-brand-cyan rounded-full blur-[80px] sm:blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
+                    </span>
+                    <span class="text-brand-cyan text-[10px] sm:text-sm font-semibold uppercase tracking-wider italic underline">Documento Reservado para Rectoría</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 sm:mb-8">
+                    Nodos de Innovación: <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-electric to-brand-cyan">Evolución de la Extensión Universitaria.</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 sm:mb-12 max-w-3xl">
+                    Propuesta integral para la <span class="text-white font-medium">territorialización de CORUNIVERSITEC</span> en la UPZ El Rincón, vinculando formación tecnológica con impacto social de alto nivel.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 sm:mb-16">
+                    <a href="tel:+573208734659" class="w-full sm:w-auto bg-white text-brand-deep px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-200 transition-all flex justify-center items-center gap-2 shadow-xl">
+                        <i class="fa-solid fa-phone-volume"></i> Llamada Directa
+                    </a>
+                    <a href="https://wa.me/573208734659?text=Señor%20Rector,%20deseo%20agendar%20una%20reunión" target="_blank" class="w-full sm:w-auto bg-brand-electric text-white border border-brand-electric/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all flex justify-center items-center gap-2">
+                        Agendar Reunión
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 border-t border-white/10 pt-10 sm:pt-12">
+                    <div class="flex flex-col">
+                        <span class="text-3xl sm:text-4xl font-bold text-white mb-1">6 JAC</span>
+                        <span class="text-brand-cyan text-[10px] sm:text-sm uppercase font-semibold tracking-widest">Base Social Legitimada</span>
+                    </div>
+                    <div class="flex flex-col border-l border-white/10 pl-4 sm:pl-8">
+                        <span class="text-3xl sm:text-4xl font-bold text-white mb-1">0%</span>
+                        <span class="text-brand-cyan text-[10px] sm:text-sm uppercase font-semibold tracking-widest">Riesgo Patrimonial</span>
+                    </div>
+                    <div class="flex flex-col col-span-2 sm:col-span-1 border-t border-white/5 pt-4 sm:pt-0 sm:border-l sm:border-t-0 sm:pl-8">
+                        <span class="text-3xl sm:text-4xl font-bold text-white mb-1">100%</span>
+                        <span class="text-brand-cyan text-[10px] sm:text-sm uppercase font-semibold tracking-widest">Alineación Institucional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Valor Institucional -->
+    <section class="py-20 bg-brand-deep">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-slate/50 p-8 sm:p-12 rounded-[2rem] border border-brand-electric/20 reveal">
+                <div class="max-w-3xl">
+                    <h2 class="text-brand-cyan font-bold uppercase tracking-widest text-xs mb-4 italic">Visión del Rector</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-8">Fortalecimiento de los Indicadores de Acreditación</h3>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                        Señor Rector, este proyecto es una herramienta de **Responsabilidad Social Universitaria (RSU)** que impacta directamente en los indicadores estratégicos:
+                    </p>
+                    <ul class="grid sm:grid-cols-2 gap-4 text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Extensión y Proyección Social</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Innovación Pedagógica en Territorio</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Bienestar Estudiantil de Cercanía</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Posicionamiento de Marca Local</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dominio del Territorio -->
+    <section id="territorio" class="py-16 sm:py-24 bg-brand-slate relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-brand-cyan font-bold uppercase tracking-widest text-xs sm:text-sm mb-4 italic">Alianza Comunitaria</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">Legitimidad Territorial en Suba</h3>
+                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-6">
+                        Turistea With Us opera bajo un modelo de <span class="text-white font-semibold">Gobernanza Local</span>. El aval de las 6 JAC garantiza un entorno seguro y validado para la operación académica.
+                    </p>
+                    
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-start gap-4 p-5 bg-brand-deep rounded-2xl border border-white/5 shadow-xl">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-shield-halved text-brand-electric text-lg sm:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1 text-sm sm:text-base">Custodia Patrimonial</h4>
+                                <p class="text-slate-400 text-xs sm:text-sm italic">Esquemas de vigilancia comunitaria para la protección integral de los activos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 bg-brand-deep rounded-2xl border border-white/5 shadow-xl">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-chart-line text-brand-cyan text-lg sm:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1 text-sm sm:text-base">Eficiencia de Mercadeo</h4>
+                                <p class="text-slate-400 text-xs sm:text-sm italic">Captación de estudiantes a través del liderazgo directo de las Juntas de Acción Comunal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center justify-center reveal delay-200">
+                    <div class="p-10 bg-brand-deep rounded-3xl border border-white/10 text-center">
+                        <i class="fa-solid fa-handshake-angle text-8xl text-brand-electric mb-8 opacity-40"></i>
+                        <h4 class="text-xl font-bold text-white italic">"Educación con Pertinencia Social"</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dotación -->
+    <section id="dotacion" class="py-16 sm:py-24 bg-brand-deep">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal mb-12">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-8 border-l-4 border-brand-cyan pl-6 uppercase tracking-wider">Inversión Tecnológica Estratégica</h3>
+                
+                <div class="bg-brand-slate p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                    <div class="grid lg:grid-cols-2 gap-10">
+                        <div>
+                            <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+                                Proponemos la implementación del primer <span class="text-brand-cyan font-bold italic">Nodo de Innovación IA</span> en Suba, dotado con 10 equipos de alto rendimiento para programas específicos.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-brand-deep rounded-xl flex items-center gap-4 border border-white/5">
+                                    <i class="fa-solid fa-laptop-code text-brand-cyan"></i>
+                                    <span class="text-sm">Hardware apto para renderizado de IA y Diseño.</span>
+                                </div>
+                                <div class="p-4 bg-brand-deep rounded-xl flex items-center gap-4 border border-white/5">
+                                    <i class="fa-solid fa-user-shield text-brand-cyan"></i>
+                                    <span class="text-sm">Protocolo de seguridad comunitaria 24/7.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-brand-electric/5 p-6 rounded-2xl border border-brand-electric/20 flex flex-col justify-center">
+                            <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest text-center">Alineación de Programas Clave</h4>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="bg-brand-deep p-4 rounded-xl text-[11px] font-bold border border-white/5 text-center text-brand-cyan uppercase leading-tight shadow-lg">
+                                    Gestión Turística y Hotelera
+                                </div>
+                                <div class="bg-brand-deep p-4 rounded-xl text-[11px] font-bold border border-white/5 text-center text-brand-cyan uppercase leading-tight shadow-lg">
+                                    Gestión de Producción Gráfica
+                                </div>
+                                <div class="bg-brand-deep p-4 rounded-xl text-[11px] font-bold border border-white/5 text-center text-brand-cyan uppercase leading-tight shadow-lg">
+                                    Gestión de Investigación Judicial y Criminalística
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelo de Sostenibilidad -->
+    <section id="modelo" class="py-16 sm:py-24 bg-brand-slate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl font-bold text-white mb-4">Modelo de Sostenibilidad</h2>
+                <p class="text-slate-400 text-sm sm:text-base italic underline">Sinergia Ganar-Ganar Institucional</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-4 sm:gap-6 mb-12 reveal">
+                <div class="bg-brand-deep p-8 rounded-2xl border border-white/5 shadow-xl">
+                    <h4 class="text-brand-electric font-bold mb-6 italic flex items-center gap-2">
+                        <i class="fa-solid fa-landmark"></i> Fortalezas CORUNIVERSITEC
+                    </h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-electric"></i> Certificación Académica de alta calidad.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-electric"></i> Soporte Pedagógico y Plataforma Digital.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-electric"></i> Infraestructura tecnológica en territorio.</li>
+                    </ul>
+                </div>
+                <div class="bg-brand-deep p-8 rounded-2xl border border-white/5 shadow-xl">
+                    <h4 class="text-brand-cyan font-bold mb-6 italic flex items-center gap-2">
+                        <i class="fa-solid fa-network-wired"></i> Fortalezas Turistea With Us
+                    </h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-plus text-brand-cyan"></i> Planta física y conectividad en zona estratégica.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-plus text-brand-cyan"></i> Reclutamiento y gestión de base estudiantil.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-plus text-brand-cyan"></i> Seguridad y operación logística en campo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-brand-electric/10 border border-brand-electric/30 p-8 rounded-2xl text-center reveal">
+                <p class="text-slate-300 text-lg italic max-w-2xl mx-auto font-medium">
+                    "Garantizamos la sostenibilidad del nodo mediante una gestión de matrícula que optimiza los recursos de la universidad desde el primer periodo académico."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contacto" class="py-16 bg-brand-deep border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-12">
+                    <h2 class="text-white font-black text-3xl mb-2">TURISTEA WITH US</h2>
+                    <p class="text-brand-cyan text-sm uppercase tracking-[0.3em] font-medium">Aliado Estratégico CORUNIVERSITEC</p>
+                </div>
+
+                <!-- Contact Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full max-w-4xl mb-16">
+                    <!-- Llamada Directa -->
+                    <a href="tel:+573208734659" class="flex flex-col items-center p-8 bg-brand-slate rounded-3xl border border-white/5 hover:border-brand-electric transition-all group shadow-2xl">
+                        <div class="w-16 h-16 bg-brand-electric/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone-volume text-3xl text-brand-electric"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">Línea Directa</span>
+                        <span class="text-xl font-bold text-white">320 873 4659</span>
+                    </a>
+                    
+                    <a href="mailto:turisteawithus@gmail.com" class="flex flex-col items-center p-8 bg-brand-slate rounded-3xl border border-white/5 hover:border-brand-cyan transition-all group shadow-2xl">
+                        <div class="w-16 h-16 bg-brand-cyan/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope-open-text text-3xl text-brand-cyan"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">Correo Oficial</span>
+                        <span class="text-sm font-bold text-white truncate w-full">turisteawithus@gmail.com</span>
+                    </a>
+                    
+                    <a href="https://instagram.com/turisteawithus" target="_blank" class="flex flex-col items-center p-8 bg-brand-slate rounded-3xl border border-white/5 hover:border-pink-500 transition-all group shadow-2xl">
+                        <div class="w-16 h-16 bg-pink-500/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-instagram text-3xl text-pink-500"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2">Red Social</span>
+                        <span class="text-sm font-bold text-white">@turisteawithus</span>
+                    </a>
+                </div>
+                
+                <div class="pt-8 border-t border-white/5 w-full flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p class="text-slate-500 text-[10px] sm:text-xs">
+                        &copy; 2026 Turistea With Us | Nodo de Innovación Territorial Suba.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-slate-500 text-[10px] uppercase font-bold tracking-widest italic underline decoration-brand-cyan">Ubicación: UPZ El Rincón, Bogotá</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/573208734659?text=Señor%20Rector,%20deseo%20agendar%20una%20reunión%20para%20revisar%20la%20Alianza%20Estratégica" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-brand-whatsapp text-white rounded-full flex items-center justify-center shadow-2xl z-[100] transition-transform hover:scale-110 active:scale-95 animate-pulse">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Reveal on scroll logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            for (let i = 0; i < revealElements.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = revealElements[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    revealElements[i].classList.add('active');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Navbar scroll behavior
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
