@@ -21,7 +21,7 @@
                         brand: {
                             deep: '#020617',
                             electric: '#2563eb',
-                            cyan: '#22d3ee',
+                            orange: '#f97316', // Nuevo color naranja plano
                             slate: '#1e293b',
                             whatsapp: '#25d366'
                         }
@@ -43,7 +43,7 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.5; /* Opacidad del canvas aumentada ligeramente */
+            opacity: 0.7; /* Mayor visibilidad para las formas geométricas */
         }
 
         .glass-effect {
@@ -53,8 +53,8 @@
         }
         
         .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.2), transparent),
-                        radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.15), transparent),
+            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.1), transparent),
                         #020617;
         }
 
@@ -83,14 +83,14 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: rgba(34, 211, 238, 0.2);
+            background: rgba(249, 115, 22, 0.3);
             z-index: -1;
         }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #f97316; border-radius: 10px; }
 
         @media (max-width: 640px) {
             h1 { font-size: 2.75rem !important; line-height: 1.1 !important; }
@@ -102,9 +102,9 @@
         }
     </style>
 </head>
-<body class="bg-brand-deep text-slate-300 font-sans selection:bg-brand-cyan selection:text-brand-deep overflow-x-hidden">
+<body class="bg-brand-deep text-slate-300 font-sans selection:bg-brand-orange selection:text-brand-deep overflow-x-hidden">
 
-    <!-- Fondo Animado de Partículas -->
+    <!-- Fondo Animado de Partículas Geométricas (Naranja) -->
     <canvas id="particleCanvas"></canvas>
 
     <!-- Navigation -->
@@ -112,17 +112,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 sm:h-20 items-center">
                 <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-brand-electric rounded-lg flex items-center justify-center">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-brand-orange rounded-lg flex items-center justify-center">
                         <i class="fa-solid fa-graduation-cap text-white text-lg sm:text-xl"></i>
                     </div>
                     <div>
                         <span class="text-white font-bold text-sm sm:text-lg block leading-none tracking-tight uppercase">Turistea With Us</span>
-                        <span class="text-brand-cyan text-[10px] sm:text-xs font-medium uppercase tracking-widest">Alianza CORUNIVERSITEC</span>
+                        <span class="text-brand-orange text-[10px] sm:text-xs font-medium uppercase tracking-widest">Alianza CORUNIVERSITEC</span>
                     </div>
                 </div>
                 
                 <div class="flex items-center">
-                    <a href="https://wa.me/573208734659?text=Hola%20Turistea%20With%20Us,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Propuesta%20de%20Alianza%20Estrat%C3%A9gica%20con%20CORUNIVERSITEC." target="_blank" class="bg-brand-electric hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-lg shadow-blue-500/30 active:scale-95">
+                    <a href="https://wa.me/573208734659?text=Hola%20Turistea%20With%20Us,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Propuesta%20de%20Alianza%20Estrat%C3%A9gica%20con%20CORUNIVERSITEC." target="_blank" class="bg-brand-orange hover:bg-orange-600 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-lg shadow-orange-500/30 active:scale-95">
                         Agendar Reunión
                     </a>
                 </div>
@@ -134,36 +134,34 @@
     <header class="relative min-h-screen flex items-center pt-16 overflow-hidden hero-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-20">
             <div class="max-w-4xl">
-                <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-full mb-6">
+                <div class="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-full mb-6">
                     <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
                     </span>
-                    <span class="text-brand-cyan text-[10px] sm:text-sm font-bold uppercase tracking-widest">Exclusivo para Rectoría</span>
+                    <span class="text-brand-orange text-[10px] sm:text-sm font-bold uppercase tracking-widest">Exclusivo para Rectoría</span>
                 </div>
                 
                 <h1 class="text-5xl sm:text-7xl font-extrabold text-white leading-tight mb-8">
-                    Nodos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-electric to-brand-cyan">Innovación</span> Territorial.
+                    Nodos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-300">Innovación</span> Territorial.
                 </h1>
                 
                 <p class="text-xl sm:text-2xl text-slate-200 leading-relaxed mb-16 max-w-3xl">
                     Llevamos la academia al corazón de <span class="text-highlight">Suba El Rincón</span>. Una alianza diseñada para maximizar el impacto social de <span class="text-white font-bold">CORUNIVERSITEC</span>.
                 </p>
 
-                <!-- Se han removido los botones de Llamada y Chat de aquí por solicitud del usuario para limpiar el Hero -->
-
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 border-t border-white/10 pt-12">
                     <div class="flex flex-col">
-                        <span class="text-4xl font-black text-white mb-1">6 JAC</span>
-                        <span class="text-brand-cyan text-xs uppercase font-bold tracking-widest">Aval Comunitario</span>
+                        <span class="text-4xl font-black text-white mb-1 text-brand-orange">6 JAC</span>
+                        <span class="text-slate-400 text-xs uppercase font-bold tracking-widest">Aval Comunitario</span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-4xl font-black text-white mb-1">0%</span>
-                        <span class="text-brand-cyan text-xs uppercase font-bold tracking-widest">Riesgo Inversión</span>
+                        <span class="text-4xl font-black text-white mb-1 text-brand-orange">0%</span>
+                        <span class="text-slate-400 text-xs uppercase font-bold tracking-widest">Riesgo Inversión</span>
                     </div>
                     <div class="flex flex-col col-span-2 sm:col-span-1">
-                        <span class="text-4xl font-black text-white mb-1">100%</span>
-                        <span class="text-brand-cyan text-xs uppercase font-bold tracking-widest">Sinergia Académica</span>
+                        <span class="text-4xl font-black text-white mb-1 text-brand-orange">100%</span>
+                        <span class="text-slate-400 text-xs uppercase font-bold tracking-widest">Sinergia Académica</span>
                     </div>
                 </div>
             </div>
@@ -175,26 +173,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-brand-slate/30 p-8 sm:p-16 rounded-[3rem] border border-white/5 reveal backdrop-blur-xl">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-brand-cyan font-bold uppercase tracking-[0.2em] text-sm mb-6 italic">Visión del Rector</h2>
+                    <h2 class="text-brand-orange font-bold uppercase tracking-[0.2em] text-sm mb-6 italic">Visión del Rector</h2>
                     <h3 class="text-3xl sm:text-5xl font-extrabold text-white mb-10 leading-tight">Territorialización del Conocimiento</h3>
                     <p class="text-slate-200 text-lg sm:text-xl leading-relaxed mb-12">
                         Esta alianza proyecta a <span class="text-highlight">CORUNIVERSITEC</span> como el líder de innovación social en Bogotá, cumpliendo con creces los indicadores de <span class="text-white font-bold">Extensión y Responsabilidad Social Universitaria</span>.
                     </p>
                     <div class="grid sm:grid-cols-2 gap-6 text-left">
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
-                            <i class="fa-solid fa-check-double text-brand-cyan text-xl"></i>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <i class="fa-solid fa-check-double text-brand-orange text-xl"></i>
                             <span class="text-white font-semibold">Acreditación Institucional</span>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
-                            <i class="fa-solid fa-check-double text-brand-cyan text-xl"></i>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <i class="fa-solid fa-check-double text-brand-orange text-xl"></i>
                             <span class="text-white font-semibold">Presencia Territorial Efectiva</span>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
-                            <i class="fa-solid fa-check-double text-brand-cyan text-xl"></i>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <i class="fa-solid fa-check-double text-brand-orange text-xl"></i>
                             <span class="text-white font-semibold">Nuevas Cohortes de Estudiantes</span>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl">
-                            <i class="fa-solid fa-check-double text-brand-cyan text-xl"></i>
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <i class="fa-solid fa-check-double text-brand-orange text-xl"></i>
                             <span class="text-white font-semibold">Innovación Pedagógica con IA</span>
                         </div>
                     </div>
@@ -208,7 +206,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal mb-16">
                 <h3 class="text-2xl sm:text-4xl font-black text-white mb-10 uppercase tracking-tight text-center sm:text-left">
-                    <span class="text-brand-cyan">Infraestructura</span> Tecnológica de Vanguardia
+                    <span class="text-brand-orange">Infraestructura</span> Tecnológica de Vanguardia
                 </h3>
                 
                 <div class="bg-brand-slate/40 p-8 sm:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl backdrop-blur-sm">
@@ -218,26 +216,26 @@
                                 El <span class="text-highlight">Nodo de Innovación IA</span> requiere una inversión estratégica de 10 equipos de alto rendimiento en <span class="text-white font-bold italic">comodato</span>.
                             </p>
                             <div class="grid gap-4">
-                                <div class="p-6 bg-brand-deep/80 rounded-2xl border-l-4 border-brand-electric">
+                                <div class="p-6 bg-brand-deep/80 rounded-2xl border-l-4 border-brand-orange">
                                     <h4 class="text-white font-bold mb-2">Seguridad Garantizada</h4>
                                     <p class="text-sm text-slate-400">Esquema de vigilancia 24/7 avalado por las 6 JAC territoriales.</p>
                                 </div>
-                                <div class="p-6 bg-brand-deep/80 rounded-2xl border-l-4 border-brand-cyan">
+                                <div class="p-6 bg-brand-deep/80 rounded-2xl border-l-4 border-brand-orange">
                                     <h4 class="text-white font-bold mb-2">Propósito Dual</h4>
                                     <p class="text-sm text-slate-400">Herramienta pedagógica para estudiantes y motor de desarrollo para la comunidad.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-brand-electric/10 to-brand-cyan/10 p-8 rounded-3xl border border-white/10">
+                        <div class="bg-gradient-to-br from-orange-500/10 to-brand-electric/10 p-8 rounded-3xl border border-white/10">
                             <h4 class="text-white font-black mb-8 uppercase text-sm tracking-widest text-center">Programas Impactados</h4>
                             <div class="space-y-4">
-                                <div class="bg-brand-deep p-5 rounded-2xl text-xs font-black text-brand-cyan uppercase tracking-widest border border-white/5 shadow-inner">
+                                <div class="bg-brand-deep p-5 rounded-2xl text-[10px] font-black text-brand-orange uppercase tracking-widest border border-orange-500/20 text-center shadow-lg">
                                     Gestión Turística y Hotelera
                                 </div>
-                                <div class="bg-brand-deep p-5 rounded-2xl text-xs font-black text-brand-cyan uppercase tracking-widest border border-white/5 shadow-inner">
+                                <div class="bg-brand-deep p-5 rounded-2xl text-[10px] font-black text-brand-orange uppercase tracking-widest border border-orange-500/20 text-center shadow-lg">
                                     Gestión de Producción Gráfica
                                 </div>
-                                <div class="bg-brand-deep p-5 rounded-2xl text-xs font-black text-brand-cyan uppercase tracking-widest border border-white/5 shadow-inner">
+                                <div class="bg-brand-deep p-5 rounded-2xl text-[10px] font-black text-brand-orange uppercase tracking-widest border border-orange-500/20 text-center shadow-lg">
                                     Gestión de Investigación Judicial y Criminalística
                                 </div>
                             </div>
@@ -253,26 +251,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center text-center">
                 <div class="mb-16">
-                    <h2 class="text-white font-black text-4xl mb-4">TURISTEA WITH US</h2>
-                    <p class="text-brand-cyan text-sm uppercase tracking-[0.4em] font-bold">Liderazgo Territorial • Innovación Social</p>
+                    <h2 class="text-white font-black text-4xl mb-4 uppercase">TURISTEA WITH US</h2>
+                    <p class="text-brand-orange text-sm uppercase tracking-[0.4em] font-bold">Liderazgo Territorial • Innovación Social</p>
                 </div>
 
-                <!-- Contacto principal en el footer -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl mb-16">
                     <!-- BOTÓN DE LLAMADA VERIFICADO -->
-                    <a href="tel:+573208734659" class="flex flex-col items-center p-10 bg-white rounded-[2.5rem] text-brand-deep hover:scale-105 transition-all group shadow-[0_20px_50px_rgba(255,255,255,0.1)]">
-                        <div class="w-16 h-16 bg-brand-electric/10 rounded-full flex items-center justify-center mb-6 group-hover:animate-bounce">
-                            <i class="fa-solid fa-phone-volume text-3xl text-brand-electric"></i>
+                    <a href="tel:+573208734659" class="flex flex-col items-center p-10 bg-brand-orange rounded-[2.5rem] text-white hover:scale-105 transition-all group shadow-[0_20px_50px_rgba(249,115,22,0.2)]">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:animate-bounce">
+                            <i class="fa-solid fa-phone-volume text-3xl text-white"></i>
                         </div>
-                        <span class="text-xs font-black uppercase tracking-widest mb-2 opacity-60 italic">Contacto Directo</span>
+                        <span class="text-xs font-black uppercase tracking-widest mb-2 opacity-80 italic">Contacto Directo</span>
                         <span class="text-2xl font-black">320 873 4659</span>
                     </a>
                     
-                    <a href="mailto:turisteawithus@gmail.com" class="flex flex-col items-center p-10 bg-brand-slate/40 rounded-[2.5rem] border border-white/10 hover:border-brand-cyan transition-all group backdrop-blur-sm">
-                        <div class="w-16 h-16 bg-brand-cyan/10 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-envelope-open-text text-3xl text-brand-cyan"></i>
+                    <a href="mailto:turisteawithus@gmail.com" class="flex flex-col items-center p-10 bg-brand-slate/40 rounded-[2.5rem] border border-white/10 hover:border-brand-orange transition-all group backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-envelope-open-text text-3xl text-brand-orange"></i>
                         </div>
-                        <span class="text-xs font-black uppercase tracking-widest text-brand-cyan mb-2">Documentación</span>
+                        <span class="text-xs font-black uppercase tracking-widest text-brand-orange mb-2">Documentación</span>
                         <span class="text-sm font-bold text-white truncate w-full">turisteawithus@gmail.com</span>
                     </a>
                     
@@ -280,7 +277,7 @@
                         <div class="w-16 h-16 bg-pink-500/10 rounded-full flex items-center justify-center mb-6">
                             <i class="fa-brands fa-instagram text-3xl text-pink-500"></i>
                         </div>
-                        <span class="text-xs font-black uppercase tracking-widest text-brand-cyan mb-2">Comunidad Digital</span>
+                        <span class="text-xs font-black uppercase tracking-widest text-brand-orange mb-2">Comunidad Digital</span>
                         <span class="text-sm font-bold text-white">@turisteawithus</span>
                     </a>
                 </div>
@@ -290,7 +287,7 @@
                         &copy; 2026 Turistea With Us | Bogotá D.C.
                     </p>
                     <div class="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/5">
-                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+                        <span class="w-2 h-2 bg-brand-orange rounded-full animate-pulse shadow-[0_0_10px_#f97316]"></span>
                         <span class="text-slate-400 text-[10px] uppercase font-black tracking-widest">Operación Territorial Activa</span>
                     </div>
                 </div>
@@ -305,11 +302,12 @@
 
     <!-- Scripts -->
     <script>
-        // --- SISTEMA DE PARTÍCULAS (FONDO ANIMADO) ---
+        // --- SISTEMA DE PARTÍCULAS GEOMÉTRICAS (NARANJA PLANO) ---
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        const particleCount = window.innerWidth < 640 ? 40 : 120;
+        // Menos partículas pero más grandes para que se sientan "cerca"
+        const particleCount = window.innerWidth < 640 ? 30 : 70;
 
         function resize() {
             canvas.width = window.innerWidth;
@@ -320,15 +318,17 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.4;
-                this.vy = (Math.random() - 0.5) * 0.4;
-                this.radius = Math.random() * 1.2 + 0.8;
+                // Movimiento más pausado para apreciar las formas
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                // Puntos más grandes
+                this.radius = Math.random() * 2.5 + 2; 
             }
 
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(34, 211, 238, 0.6)';
+                ctx.fillStyle = '#f97316'; // Naranja plano
                 ctx.fill();
             }
 
@@ -350,18 +350,37 @@
             for (let i = 0; i < particles.length; i++) {
                 particles[i].draw();
                 particles[i].update();
+                
+                // Conexiones para formar geometría
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 130) {
+                    
+                    // Distancia de conexión aumentada para que se vean más cerca
+                    if (dist < 180) {
                         ctx.beginPath();
-                        // Opacidad de las líneas aumentada (de 0.3 a 0.5) para que se noten más
-                        ctx.strokeStyle = `rgba(37, 99, 235, ${0.5 * (1 - dist / 130)})`;
-                        ctx.lineWidth = 0.6;
+                        ctx.strokeStyle = `rgba(249, 115, 22, ${0.4 * (1 - dist / 180)})`;
+                        ctx.lineWidth = 1.2; // Líneas un poco más gruesas
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
+
+                        // Formación de Triángulos (Formas Geométricas)
+                        for (let k = j + 1; k < particles.length; k++) {
+                            const dx2 = particles[j].x - particles[k].x;
+                            const dy2 = particles[j].y - particles[k].y;
+                            const dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+
+                            if (dist2 < 180) {
+                                ctx.beginPath();
+                                ctx.fillStyle = `rgba(249, 115, 22, ${0.05 * (1 - dist / 180)})`;
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.lineTo(particles[k].x, particles[k].y);
+                                ctx.fill();
+                            }
+                        }
                     }
                 }
             }
